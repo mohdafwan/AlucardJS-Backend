@@ -10,7 +10,7 @@ app.use(
     origin: process.env.CORS_ORIGIN,
     credentials: true,
   })
-); // cors middleware
+);
 app.use(
   express.json({
     limit: LIMIT_SIZE,
@@ -24,4 +24,8 @@ app.use(
 );
 app.use(express.static('public'));
 app.use(cookieParser({}));
+// end middleware
+
+
+// exports app -> express()
 export { app };
