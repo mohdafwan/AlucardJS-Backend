@@ -26,6 +26,8 @@ app.use(express.static('public'));
 app.use(cookieParser({}));
 // end middleware
 
-
+// routes
+import userRouter from './routes/user.routes.js';
+app.use('/api/v1/users', userRouter);
 // exports app -> express()
 export { app };
